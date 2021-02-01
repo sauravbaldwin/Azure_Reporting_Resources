@@ -1,7 +1,12 @@
-﻿Connect-AzAccount
+﻿############# Login Azure Account ################### 
+
+Connect-AzAccount
+
+######################################################
+
 $vmobjs = @()
 $Subscriptions = Get-AzSubscription
-foreach ($sub in $Subscriptions)
+foreach ($sub in $Subscriptions)                            ####################  Scan the Get-AzVM cammand for each subscription ############
 {
     Get-AzSubscription -SubscriptionName $sub.Name | Set-AzContext
 $vms = Get-AzVM -Status
