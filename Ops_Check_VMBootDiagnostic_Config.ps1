@@ -39,6 +39,6 @@ foreach ($vm in $vms)
             $vmobjs += $vmInfo
     }
 }
-$vmobjs | Export-Csv -Path C:\Users\saurav.c.shekhar\Documents\Inventory\VMdiagnostic_Check14012021.csv -NoTypeInformation
+$vmobjs | Export-Csv -Path C:\xx\xxx.csv -NoTypeInformation
 Write-Host "VM list with diagnostic details written to the csv file"
-Invoke-Item C:\Users\saurav.c.shekhar\Documents\Inventory\VMdiagnostic_Check14012021.csv
+Invoke-Item C:\xx\xxx.csv
